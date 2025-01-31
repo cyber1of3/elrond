@@ -1,14 +1,14 @@
 <p align="center">
-  <a href="https://github.com/cyber1of3/elrond"><img src="elrond/images/logo_trans_big.png" alt="Logo" width="400" height="400"></a>
+  <a href="https://github.com/cyberg3cko/elrond"><img src="elrond/images/logo_trans_big.png" alt="Logo" width="400" height="400"></a>
   <p align="center">
     Accelerating the collection, processing, analysis and outputting of digital forensic artefacts.
     <br><br>
-    <a href="https://mit-license.org"><img src="https://img.shields.io/github/license/cyber1of3/elrond" alt="License: MIT"></a>
-    <a href="https://github.com/cyber1of3/elrond/issues"><img src="https://img.shields.io/github/issues/cyber1of3/elrond" alt="Issues"></a>
-    <a href="https://github.com/cyber1of3/elrond/network/members"><img src="https://img.shields.io/github/forks/cyber1of3/elrond" alt="Forks"></a>
-    <a href="https://github.com/cyber1of3/elrond/stargazers"><img src="https://img.shields.io/github/stars/cyber1of3/elrond" alt="Stars"></a>
+    <a href="https://mit-license.org"><img src="https://img.shields.io/github/license/cyberg3cko/elrond" alt="License: MIT"></a>
+    <a href="https://github.com/cyberg3cko/elrond/issues"><img src="https://img.shields.io/github/issues/cyberg3cko/elrond" alt="Issues"></a>
+    <a href="https://github.com/cyberg3cko/elrond/network/members"><img src="https://img.shields.io/github/forks/cyberg3cko/elrond" alt="Forks"></a>
+    <a href="https://github.com/cyberg3cko/elrond/stargazers"><img src="https://img.shields.io/github/stars/cyberg3cko/elrond" alt="Stars"></a>
     <a><img src="https://img.shields.io/badge/subject-DFIR-red" alt="Subject"></a>
-    <a><img src="https://img.shields.io/github/last-commit/cyber1of3/elrond" alt="Last Commit"></a>
+    <a><img src="https://img.shields.io/github/last-commit/cyberg3cko/elrond" alt="Last Commit"></a>
     <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
     <br><br>
   </p>
@@ -50,12 +50,12 @@ It is important to note that elrond utilises many existing tools which have been
 I presented elrond, at [Wild West Hackin' Fest 2023](https://wildwesthackinfest.com) as part of the Toolshed Talks.
 
 [![Tool Shed Demo: ELROND | Ben Smith | WWHF 2023](https://img.youtube.com/vi/vjSHPhDPlks/0.jpg)](https://www.youtube.com/watch?v=vjSHPhDPlks "Tool Shed Demo: ELROND | Ben Smith | WWHF 2023")
-- [Slidedeck](https://github.com/cyber1of3/elrond/blob/main/elrond.pdf)
+- [Slidedeck](https://github.com/cyberg3cko/elrond/blob/main/elrond.pdf)
 <br>
 
 ### Related Projects
 
-elrond is responsible for the analysis-side of digital forensics, but what about acquisition? An acompanying script called [gandalf](https://github.com/cyber1of3/gandalf) can be deployed (locally or remotely) on either Windows (using [PowerShell](https://learn.microsoft.com/en-us/powershell/)), Linux, or macOS (using [Python](https://www.python.org) or [bash]()) hosts to acquire forensic artefacts. 
+elrond is responsible for the analysis-side of digital forensics, but what about acquisition? An acompanying script called [gandalf](https://github.com/cyberg3cko/gandalf) can be deployed (locally or remotely) on either Windows (using [PowerShell](https://learn.microsoft.com/en-us/powershell/)), Linux, or macOS (using [Python](https://www.python.org) or [bash]()) hosts to acquire forensic artefacts. 
 <br><br><br>
 
 ## Configuration
@@ -67,22 +67,22 @@ elrond is responsible for the analysis-side of digital forensics, but what about
     - `sansforensics:forensics`
   - For **ARM**, download [elrond](https://1drv.ms/u/s!Asg_rIbKaSxrgcWiQxIrP9mLAJWgLuI?e=RIJesL) archive (22.04)
     - `elrond:elrond`
-> *Neither OVA contains the NSRL dataset; execute [nsrl.sh](https://github.com/cyber1of3/elrond/blob/main/elrond/tools/config/scripts/nsrl.sh) and follow instructions to download.*<br>
+> *Neither OVA contains the NSRL dataset; execute [nsrl.sh](https://github.com/cyberg3cko/elrond/blob/main/elrond/tools/config/scripts/nsrl.sh) and follow instructions to download.*<br>
 >
-> It is recommended to run [/opt/elrond/update.sh](https://github.com/cyber1of3/elrond/blob/main/elrond/update.sh) which will download and configure the **latest version of elrond** onto your existing system.
+> It is recommended to run [/opt/elrond/update.sh](https://github.com/cyberg3cko/elrond/blob/main/elrond/update.sh) which will download and configure the **latest version of elrond** onto your existing system.
 <br>
 
 ### Self-build
 
 **Download Virtual Machine**<br>
-> There are several software package required for using elrond. Almost all of them are contained within the [SANS SIFT Worksation](https://www.sans.org/tools/sift-workstation/) virtual machine OVA. For the software which is not included ([make.sh](https://github.com/cyber1of3/elrond/blob/main/make.sh)) installs and configures the additional software required for all potential functionality leveraged by elrond (volatility3, apfs-fuse, ClamAV etc.).
+> There are several software package required for using elrond. Almost all of them are contained within the [SANS SIFT Worksation](https://www.sans.org/tools/sift-workstation/) virtual machine OVA. For the software which is not included ([make.sh](https://github.com/cyberg3cko/elrond/blob/main/make.sh)) installs and configures the additional software required for all potential functionality leveraged by elrond (volatility3, apfs-fuse, ClamAV etc.).
 - For **x64** download [SANS SIFT Workstation](https://digital-forensics.sans.org/community/downloads) (20.04 LTS)
 - For **ARM** download [Ubuntu 22.04](https://cdimage.ubuntu.com/jammy/daily-live/current/)
 <br>
 
 **Configure**<br>
-Follow instructions in [CONFIG.md](https://github.com/cyber1of3/elrond/blob/main/elrond/CONFIG.md)
-> *You will only need to run the make.sh script once, per 'elrond VM' instance; if you encounter errors with [CONFIG.md](https://github.com/cyber1of3/elrond/blob/main/elrond/CONFIG.md), individual scripts for each of the software packages are contained in [.../elrond/elrond/tools/config/scripts/](https://github.com/cyber1of3/elrond/tree/main/elrond/tools/config/scripts/)*
+Follow instructions in [CONFIG.md](https://github.com/cyberg3cko/elrond/blob/main/elrond/CONFIG.md)
+> *You will only need to run the make.sh script once, per 'elrond VM' instance; if you encounter errors with [CONFIG.md](https://github.com/cyberg3cko/elrond/blob/main/elrond/CONFIG.md), individual scripts for each of the software packages are contained in [.../elrond/elrond/tools/config/scripts/](https://github.com/cyberg3cko/elrond/tree/main/elrond/tools/config/scripts/)*
 <br>
 
 ## Usage
@@ -109,7 +109,7 @@ Follow instructions in [CONFIG.md](https://github.com/cyber1of3/elrond/blob/main
 ### Gandalf (-G)<br>
 **Examples**<br>
 
-- Automatically (**-a**) and superquietly (**-Q**) Process (**-P**), Analyse (**-A**) and index artefacts in Splunk (**-S**) (acquired using [gandalf](https://github.com/cyber1of3/gandalf))<br>
+- Automatically (**-a**) and superquietly (**-Q**) Process (**-P**), Analyse (**-A**) and index artefacts in Splunk (**-S**) (acquired using [gandalf](https://github.com/cyberg3cko/gandalf))<br>
 
 `python3 elrond.py case_name /path/to/disk/images -aqvVGPAS`
 
@@ -133,7 +133,7 @@ Follow instructions in [CONFIG.md](https://github.com/cyber1of3/elrond/blob/main
 
 ### Support
 
-See [SUPPORT.md](https://github.com/cyber1of3/elrond/blob/main/elrond/SUPPORT.md) for a list of commands and additional third-party tools to help with preparing images or data for elrond.
+See [SUPPORT.md](https://github.com/cyberg3cko/elrond/blob/main/elrond/SUPPORT.md) for a list of commands and additional third-party tools to help with preparing images or data for elrond.
 <br><br>
 
 ## Artefacts
@@ -279,7 +279,7 @@ Below is a list of all the artefacts collected and processed from the respective
 
 ### Notices
 
-If you notice 'nixCommand' or 'nixProcess' in files processed from a Windows OS, this is somewhat intentional. I debated with myself whether to try and change these to 'WinCommand' and 'WinProcess', respectively but also considered the situation of Windows Subsystem for Linux (WSL) being installed. As a result, I have left them as they are. If you know of a way to identify whether a file belongs inside the Linux element of WSL based on file path, file type, file content etc. please raise an [issue](https://github.com/cyber1of3/elrond/issues) and let me know.
+If you notice 'nixCommand' or 'nixProcess' in files processed from a Windows OS, this is somewhat intentional. I debated with myself whether to try and change these to 'WinCommand' and 'WinProcess', respectively but also considered the situation of Windows Subsystem for Linux (WSL) being installed. As a result, I have left them as they are. If you know of a way to identify whether a file belongs inside the Linux element of WSL based on file path, file type, file content etc. please raise an [issue](https://github.com/cyberg3cko/elrond/issues) and let me know.
 <br><br><br>
 
 
