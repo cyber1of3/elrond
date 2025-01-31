@@ -230,7 +230,7 @@ def main(
                 == "n"
             ):
                 print(
-                    "\n  Please run https://github.com/ezaspy/elrond/elrond/tools/scripts/apfs-fuse.sh and try again.\n\n"
+                    "\n  Please run https://github.com/cyberg3cko/elrond/elrond/tools/scripts/apfs-fuse.sh and try again.\n\n"
                 )
                 if os.path.exists("/usr/local/bin/apfs"):
                     shutil.rmtree("/usr/local/bin/apfs")
@@ -410,7 +410,11 @@ def main(
                                         + imgformat
                                     )
                                 except PermissionError:
-                                    print("\n    '{}' could not be created. Are you running as root?".format(os.path.join(output_directory, f)))
+                                    print(
+                                        "\n    '{}' could not be created. Are you running as root?".format(
+                                            os.path.join(output_directory, f)
+                                        )
+                                    )
                                     sys.exit()
                             else:
                                 print(

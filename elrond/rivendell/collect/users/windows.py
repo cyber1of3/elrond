@@ -39,6 +39,7 @@ def windows_users(
     )
     for each in item_list:
         if os.path.isdir(item + each):
+            # ntuser.dat
             try:
                 os.stat(regdest)
             except:
@@ -78,6 +79,7 @@ def windows_users(
             except:
                 pass
 
+            # usrclass.dat
             try:
                 os.stat(regdest)
             except:
@@ -117,6 +119,47 @@ def windows_users(
             except:
                 pass
 
+            # ConsoleHost_history.txt
+            try:
+                os.stat(dest)
+            except:
+                os.makedirs(dest)
+            if verbosity != "":
+                print(
+                    "     Collecting 'ConsoleHost_history.txt' PowerShell history for '{}' for {}...".format(
+                        each, vssimage
+                    )
+                )
+            (
+                entry,
+                prnt,
+            ) = "{},{},{},'{}' (ConsoleHost_history.txt) PowerShell history\n".format(
+                datetime.now().isoformat(),
+                img.split("::")[0],
+                stage,
+                each,
+            ), " -> {} -> {} ConsoleHost_history.txt PowerShell history hive from profile '{}'{} for '{}'".format(
+                datetime.now().isoformat().replace("T", " "),
+                stage,
+                each,
+                vsstext.replace("vss", "volume shadow copy #"),
+                img.split("::")[0],
+            )
+            write_audit_log_entry(
+                verbosity,
+                output_directory,
+                entry,
+                prnt,
+            )
+            try:
+                shutil.copy2(
+                    item + each + "/AppData/Local/Microsoft/Windows/UsrClass.dat",
+                    dest + "/" + each + "+PowerShell_Console_history.txt",
+                )
+            except:
+                pass
+
+            # clipboard
             try:
                 os.stat(clipdest)
             except:
@@ -216,6 +259,7 @@ def windows_users(
                                     except:
                                         pass
 
+            # jumplists
             try:
                 os.stat(jumpdest)
             except:
@@ -288,6 +332,7 @@ def windows_users(
                     except:
                         pass
 
+            # outlook
             try:
                 os.stat(maildest)
             except:

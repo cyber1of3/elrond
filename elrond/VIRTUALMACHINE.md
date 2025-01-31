@@ -52,4 +52,4 @@ Download and import [SANS SIFT Worksation](https://www.sans.org/tools/sift-works
 
 ---
 
-_If you experience any issues, please try building a new SIFT Workstation VM and then raise an issue inline with the instructions in the [README.md](https://github.com/ezaspy/elrond/blob/main/elrond/README.md)_
+_If you experience any issues, please try building a new SIFT Workstation VM and then raise an issue inline with the instructions in the [README.md](https://github.com/cyberg3cko/elrond/blob/main/elrond/README.md)_

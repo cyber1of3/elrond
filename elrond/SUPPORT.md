@@ -49,12 +49,12 @@ If you have collected a macOS disk image in the form of a DMG, you can convert i
 
 ## Capturing Memory
 ### macOS
-* Download osxpmem from https://github.com/ezaspy/elrond/tree/main/tools/<br>
+* Download osxpmem from https://github.com/cyberg3cko/elrond/tree/main/tools/<br>
 
 `sudo chown -R root:wheel osxpmem.app/ && sudo chmod +x osxpmem.app/osxpmem && sudo osxpmem.app/osxpmem -o mem.aff4 && sudo osxpmem.app/osxpmem -e /dev/pmem -o mem.raw mem.aff4`
 <br>
 ### Linux
-* Download avml from https://github.com/ezaspy/elrond/tree/main/tools/<br>
+* Download avml from https://github.com/cyberg3cko/elrond/tree/main/tools/<br>
 
 ` sudo chmod +x avml && sudo ./avml $(uname -r).mem`
 
@@ -85,7 +85,7 @@ See Appendix for information on additional Linux distros<br><br><br>
 
 #### Analysis Machine
 * Download the relevant Kernel Debug Kit: http://developer.apple.com/hardwaredrivers<br>
-* Download volatility3 from https://github.com/ezaspy/elrond/tree/main/tools/<br>
+* Download volatility3 from https://github.com/cyberg3cko/elrond/tree/main/tools/<br>
 
 `unzip volatility3.zip`<br>
 >
@@ -117,7 +117,7 @@ See Appendix for information on additional Linux distros<br><br><br>
 ### Analysis Machine
 `cp [RHEL|Ubuntu]64-$(uname -r).zip volatility/plugins/overlays/linux/`<br>
 
-* Download volatility from https://github.com/ezaspy/elrond/tree/main/tools/<br>
+* Download volatility from https://github.com/cyberg3cko/elrond/tree/main/tools/<br>
 
 `sudo apt-get install build-essential && sudo apt-get install dwarfdump`<br>
 >
@@ -158,7 +158,7 @@ Required for volatility3 symbol tables, you will need to obain the relevant debu
 
 ### Pre-created Profiles (volatility2.6)
 
-For a full list/repository of currently developed profiles for volatility2.6 please visit https://github.com/ezaspy/profiles
+For a full list/repository of currently developed profiles for volatility2.6 please visit https://github.com/cyberg3cko/profiles
 Of course, you develop your own, please adhere to the following naming conventions:
 * Uploading to GitHub (directory structure):
     * **profiles -> Mac -> 10.11 -> ElCapitan_10.11.1_15B42.zip**
